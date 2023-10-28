@@ -33,12 +33,12 @@ class MedicineLibrary extends StatelessWidget{
               shrinkWrap: true,
               crossAxisCount: 2,
               children: [
-                _buildGridButton('Button 1', 'assets/button1.png'),
-                _buildGridButton('Button 2', 'assets/button2.png'),
-                _buildGridButton('Button 3', 'assets/button3.png'),
-                _buildGridButton('Button 4', 'assets/button4.png'),
-                _buildGridButton('Button 5', 'assets/button5.png'),
-                _buildGridButton('Button 6', 'assets/button6.png'),
+                _buildGridButton('Button 1', 'lib/features/assets/1.png'),
+                _buildGridButton('Button 2', 'lib/features/assets/2.png'),
+                _buildGridButton('Button 3', 'lib/features/assets/3.png'),
+                _buildGridButton('Button 4', 'lib/features/assets/4.png'),
+                _buildGridButton('Button 5', 'lib/features/assets/5.png'),
+                _buildGridButton('Button 6', 'lib/features/assets/6.png'),
               ],
             )
           ]

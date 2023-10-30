@@ -4,20 +4,23 @@ class MedicineLibrary extends StatelessWidget {
   const MedicineLibrary({Key? key}) : super(key: key);
 
   @override
-  Widget build(BuildContext context) {
+ Widget build(BuildContext context) {
     return Scaffold(
       body: SingleChildScrollView(
         padding: const EdgeInsets.all(8.0),
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            const Text(
-              'Medicine Library',
-              style: TextStyle(
-                fontFamily: 'Poppins',
-                fontWeight: FontWeight.w800,
-                fontSize: 30,
-                color: Color.fromARGB(255, 25, 23, 149),
+            const Padding(
+              padding: EdgeInsets.only(top: 30), // Adjust the top padding as needed
+              child: Text(
+                'Medicine Library',
+                style: TextStyle(
+                  fontFamily: 'Poppins',
+                  fontWeight: FontWeight.w800,
+                  fontSize: 30,
+                  color: Color.fromARGB(255, 25, 23, 149),
+                ),
               ),
             ),
             const SizedBox(height: 20),
@@ -30,7 +33,7 @@ class MedicineLibrary extends StatelessWidget {
                 ),
               ),
             ),
-            const SizedBox(height: 10),
+            const SizedBox(height: 1),
             GridView.count(
               shrinkWrap: true,
               crossAxisCount: 2,

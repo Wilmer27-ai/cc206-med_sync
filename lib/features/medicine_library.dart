@@ -6,11 +6,13 @@ class MedicineLibrary extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return  Scaffold(
-      body: Padding(
+      body: SingleChildScrollView(
         padding: const EdgeInsets.all(8.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
+        child: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children:[
            const Text('Medicine Library',
            style: TextStyle(
             fontFamily: 'Poppins',
@@ -43,6 +45,7 @@ class MedicineLibrary extends StatelessWidget{
             )
           ]
         ),
+      ),
       ),
     );
   }

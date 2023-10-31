@@ -18,7 +18,7 @@ class MedicineLibrary extends StatelessWidget {
                 style: TextStyle(
                   fontFamily: 'Poppins',
                   fontWeight: FontWeight.w800,
-                  fontSize: 30,
+                  fontSize: 40,
                   color: Color.fromARGB(255, 25, 23, 149),
                 ),
               ),
@@ -33,7 +33,7 @@ class MedicineLibrary extends StatelessWidget {
                             color: Colors.grey[300], // Set the background color to gray
                             borderRadius: BorderRadius.circular(25.0), // Set the radius as needed
                           ),
-                          child: TextField(
+                          child: const TextField(
                             decoration: InputDecoration(
                               hintText: 'Search for diseases, remedies, etc...',
                               border: InputBorder.none, // Remove the default border
@@ -42,14 +42,14 @@ class MedicineLibrary extends StatelessWidget {
                           ),
                         ),
                       ),
-                      SizedBox(width: 10.0), // Add some spacing between the text field and the icon
+                      const SizedBox(width: 10.0), // Add some spacing between the text field and the icon
                       Container(
                         padding: const EdgeInsets.all(10.0),
                         decoration: BoxDecoration(
                           shape: BoxShape.circle,
                           color: Colors.grey[300], // Set the background color of the circular icon to gray
                         ),
-                        child: Icon(
+                        child: const Icon(
                           Icons.search, // Icons class
                           color: Color.fromARGB(255, 25, 23, 149), // Set the icon color
                           size: 30.0, // Set the size of the icon

@@ -12,7 +12,7 @@ class MedicineLibrary extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             const Padding(
-              padding: EdgeInsets.only(top: 30), // Adjust the top padding as needed
+              padding: EdgeInsets.only(top: 30), // Adjust the top padding 
               child: Text(
                 'Medicine Library',
                 style: TextStyle(
@@ -24,15 +24,42 @@ class MedicineLibrary extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 20),
-            const Padding(
-              padding: EdgeInsets.all(8.0),
-              child: TextField(
-                decoration: InputDecoration(
-                  hintText: 'Search',
-                  border: OutlineInputBorder(),
-                ),
-              ),
-            ),
+            //SEARCH
+             Row(
+                    children: [
+                      Expanded(
+                        child: Container(
+                          decoration: BoxDecoration(
+                            color: Colors.grey[300], // Set the background color to gray
+                            borderRadius: BorderRadius.circular(25.0), // Set the radius as needed
+                          ),
+                          child: TextField(
+                            decoration: InputDecoration(
+                              hintText: 'Search for diseases, remedies, etc...',
+                              border: InputBorder.none, // Remove the default border
+                              contentPadding: EdgeInsets.all(10.0), // Add padding to the input field
+                            ),
+                          ),
+                        ),
+                      ),
+                      SizedBox(width: 10.0), // Add some spacing between the text field and the icon
+                      Container(
+                        padding: const EdgeInsets.all(10.0),
+                        decoration: BoxDecoration(
+                          shape: BoxShape.circle,
+                          color: Colors.grey[300], // Set the background color of the circular icon to gray
+                        ),
+                        child: Icon(
+                          Icons.search, // Icons class
+                          color: Color.fromARGB(255, 25, 23, 149), // Set the icon color
+                          size: 30.0, // Set the size of the icon
+                        ),
+                      ),
+                    ],
+                  ),
+
+            //SEARCH
+            
             const SizedBox(height: 1),
             GridView.count(
               shrinkWrap: true,
@@ -73,3 +100,4 @@ return Container(
   ),
 );
 }
+

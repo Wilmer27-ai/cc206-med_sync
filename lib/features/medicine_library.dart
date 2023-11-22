@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:cc206_med_sync/med_search_screen.dart';
+
+
 class MedicineLibrary extends StatelessWidget {
   const MedicineLibrary({Key? key}) : super(key: key);
 
-  @override
- Widget build(BuildContext context) {
+    @override
+  Widget build(BuildContext context) {
     return Scaffold(
       body: SingleChildScrollView(
         padding: const EdgeInsets.all(8.0),
@@ -12,7 +13,7 @@ class MedicineLibrary extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             const Padding(
-              padding: EdgeInsets.only(top: 30), // Adjust the top padding 
+              padding: EdgeInsets.only(top: 30),
               child: Text(
                 'Medicine Library',
                 style: TextStyle(

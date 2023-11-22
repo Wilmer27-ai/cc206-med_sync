@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:cc206_med_sync/med_search_screen.dart';
 class MedicineLibrary extends StatelessWidget {
   const MedicineLibrary({Key? key}) : super(key: key);
 
@@ -58,7 +58,8 @@ class MedicineLibrary extends StatelessWidget {
                     ],
                   ),
 
-            //SEARCH
+            //SEARCH 
+
             
             const SizedBox(height: 1),
             GridView.count(

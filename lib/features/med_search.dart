@@ -1,5 +1,3 @@
-
-
 import 'package:cc206_med_sync/features/medicine_library.dart';
 import 'package:flutter/material.dart';
 
@@ -36,13 +34,13 @@ class med_search extends StatelessWidget {
               crossAxisCount: 2,
               mainAxisSpacing: 8.0,
               crossAxisSpacing: 8.0,
-              children: [
-                _buildGridButton('assets/images/medicine_library.png', 100, 100),
-                _buildGridButton('assets/images/medicine_library.png', 100, 100),
-                _buildGridButton('assets/images/medicine_library.png', 100, 100),
-                _buildGridButton(context,'assets/images/medicine_library.png', 100, 100),
-                _buildGridButton('assets/images/medicine_library.png', 100, 100),
-                _buildGridButton('assets/images/medicine_library.png', 100, 100),
+              children: [ 
+                _buildGridButton(context,'assets/images/medicine_library.png', 100, 100, 0),
+                _buildGridButton(context,'assets/images/medicine_library.png', 100, 100, 1),
+                _buildGridButton(context,'assets/images/medicine_library.png', 100, 100, 2),
+                _buildGridButton(context,'assets/images/medicine_library.png', 100, 100, 3),
+                _buildGridButton(context,'assets/images/medicine_library.png', 100, 100, 4),
+                _buildGridButton(context,'assets/images/medicine_library.png', 100, 100, 5),
               ],
             )
           ],
@@ -52,17 +50,19 @@ class med_search extends StatelessWidget {
   }
 }
 
-Widget _buildGridButton(String imagePath, double buttonHeight, double buttonWidth){
+Widget _buildGridButton(BuildContext context, String imagePath, double buttonHeight, double buttonWidth, int index) {
   return InkWell(
-    onTap: () {
+    onTap: index == 3 
+    ? () {
       Navigator.push(
         context,
         MaterialPageRoute(builder: (context) => const MedicineLibrary()),
       );
-    },
+    }
+    : null,
     child: Container(
       margin: const EdgeInsets.all(8.0),
-      decoration: BoxDecoration( 
+      decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(20.0),
         color: const Color.fromARGB(230, 232, 230, 230),
       ),
@@ -74,7 +74,7 @@ Widget _buildGridButton(String imagePath, double buttonHeight, double buttonWidt
           width: buttonWidth,
           fit: BoxFit.cover,
         ),
-        ),
+      ),
     ),
   );
 }

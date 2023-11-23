@@ -20,6 +20,6 @@ class MyApp extends StatelessWidget {
       ),
       home:  const med_search(),
     );
-  }
+  } 
 }
 

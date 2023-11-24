@@ -1,0 +1,11 @@
+{
+    "configurations": [
+        
+        {
+            "name": "Flutter (lib\\med_search_screen.dart)",
+            "type": "dart",
+            "request": "launch",
+            "program": "lib\\med_search_screen.dart"
+        }
+    ]
+}

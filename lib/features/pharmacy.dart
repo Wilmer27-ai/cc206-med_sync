@@ -45,7 +45,7 @@ class PharmacyPage extends StatelessWidget {
                       fontFamily: 'Poppins',
                       fontWeight: FontWeight.bold,
                       fontSize: 15,
-                      color: Colors.black,
+                      color: Colors.black,  
                     ),
                   ),
                 ],

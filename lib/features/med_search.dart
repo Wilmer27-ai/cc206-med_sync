@@ -1,4 +1,5 @@
 import 'package:cc206_med_sync/features/medicine_library.dart';
+import 'package:cc206_med_sync/features/pharmacy.dart';
 import 'package:flutter/material.dart';
 
 
@@ -52,14 +53,22 @@ class med_search extends StatelessWidget {
 
 Widget _buildGridButton(BuildContext context, String imagePath, double buttonHeight, double buttonWidth, int index) {
   return InkWell(
-    onTap: index == 4 
-    ? () {
-      Navigator.push(
-        context,
-        MaterialPageRoute(builder: (context) => const MedicineLibrary()),
-      );
-    }
-    : null,
+    onTap: () {
+      if (index == 3) {
+        // Navigator push for index 3
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => const PharmacyPage()),
+        );
+      } else if (index == 4) {
+        // Navigator push for index 4
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => const MedicineLibrary()),
+        );
+      }
+    },
+    
     child: Container(
       margin: const EdgeInsets.all(8.0),
       decoration: BoxDecoration(
@@ -78,4 +87,5 @@ Widget _buildGridButton(BuildContext context, String imagePath, double buttonHei
     ),
   );
 }
+
  

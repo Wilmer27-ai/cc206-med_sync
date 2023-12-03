@@ -143,48 +143,31 @@ class PharmacyPage extends StatelessWidget {
                       child: index == 0
                           ? Image.asset(
                               'lib/features/assets/ph1.png',
-                              fit: BoxFit.cover,
+                              fit: BoxFit.fill,
                             )
                           : index == 1
-                              ? Column(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  children: [
-                                    Image.asset(
+                                  ? Image.asset(
                                       'lib/features/assets/ph2.png',
-                                      width: 80,
-                                      height: 80,
-                                      fit: BoxFit.cover,
-                                    ),
-                                    const SizedBox(height: 8),
-                                    Text(
-                                      'Button $index',
-                                      style: const TextStyle(
-                                        fontFamily: 'Poppins',
-                                        fontWeight: FontWeight.w600,
-                                        fontSize: 16,
-                                        color: Colors.black,
-                                      ),
-                                    ),
-                                  ],
-                                )
+                                      fit: BoxFit.fill,
+                                    )
                               : index == 2
                                   ? Image.asset(
                                       'lib/features/assets/ph3.png',
-                                      fit: BoxFit.cover,
+                                      fit: BoxFit.fill,
                                     )
                                   : index == 3
                                       ? Image.asset(
                                           'lib/features/assets/ph4.png',
-                                          fit: BoxFit.cover,
+                                          fit: BoxFit.fill,
                                         )
                                       : index == 4
                                           ? Image.asset(
-                                              'lib/features/assets/ph2.png',
-                                              fit: BoxFit.cover,
+                                              'lib/features/assets/ph1.png',
+                                              fit: BoxFit.fill,
                                             )
                                           : Image.asset(
-                                              'lib/features/assets/ph1.png',
-                                              fit: BoxFit.cover,
+                                              'lib/features/assets/ph2.png',
+                                              fit: BoxFit.fill,
                                             ),
                     ),
                   ),

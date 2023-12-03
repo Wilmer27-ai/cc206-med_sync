@@ -9,7 +9,7 @@ class PharmacyPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         leading: IconButton(
-          icon: Icon(
+          icon: const Icon(
             Icons.arrow_back,
             color: Colors.black,
           ),
@@ -17,7 +17,7 @@ class PharmacyPage extends StatelessWidget {
             Navigator.pop(context);
           },
         ),
-        title: Center(
+        title: const Center(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
@@ -38,7 +38,7 @@ class PharmacyPage extends StatelessWidget {
                     size: 20,
                     color: Colors.black,
                   ),
-                  const SizedBox(width: 5),
+                  SizedBox(width: 5),
                   Text(
                     'Manila, Philippines',
                     style: TextStyle(
@@ -53,7 +53,7 @@ class PharmacyPage extends StatelessWidget {
             ],
           ),
         ),
-        actions: [
+        actions: const [
           // Remove the cart icon from the title page
         ],
       ),
@@ -76,10 +76,10 @@ class PharmacyPage extends StatelessWidget {
                         borderRadius: BorderRadius.circular(25.0),
                       ),
                       child: TextFormField(
-                        decoration: InputDecoration(
+                        decoration: const InputDecoration(
                           hintText: 'Search for drugs...',
                           border: InputBorder.none,
-                          contentPadding: const EdgeInsets.all(10.0),
+                          contentPadding: EdgeInsets.all(10.0),
                           prefixIcon: Icon(
                             Icons.search,
                             color: Colors.black,
@@ -95,8 +95,8 @@ class PharmacyPage extends StatelessWidget {
                       color: Colors.grey[300],
                       borderRadius: BorderRadius.circular(25.0),
                     ),
-                    child: Padding(
-                      padding: const EdgeInsets.all(10.0),
+                    child: const Padding(
+                      padding: EdgeInsets.all(10.0),
                       child: Icon(
                         Icons.shopping_cart,
                         size: 20,
@@ -108,8 +108,8 @@ class PharmacyPage extends StatelessWidget {
               ),
             ),
             // All Products text
-            Padding(
-              padding: const EdgeInsets.symmetric(vertical: 10),
+            const Padding(
+              padding: EdgeInsets.symmetric(vertical: 10),
               child: Text(
                 'All Products',
                 style: TextStyle(
@@ -125,7 +125,7 @@ class PharmacyPage extends StatelessWidget {
             // Grid of buttons
             GridView.builder(
               shrinkWrap: true,
-              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                 crossAxisCount: 2,
                 crossAxisSpacing: 10.0,
                 mainAxisSpacing: 10.0,
@@ -140,7 +140,7 @@ class PharmacyPage extends StatelessWidget {
                   child: Center(
                     child: Text(
                       'Button $index',
-                      style: TextStyle(
+                      style: const TextStyle(
                         fontFamily: 'Poppins',
                         fontWeight: FontWeight.w600,
                         fontSize: 16,

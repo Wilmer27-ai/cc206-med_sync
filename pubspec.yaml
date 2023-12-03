@@ -67,6 +67,12 @@ flutter:
     - lib/features/assets/4.png
     - lib/features/assets/5.png
     - lib/features/assets/6.png
+    - lib/features/assets/p1.png
+    - lib/features/assets/ph1.png
+    - lib/features/assets/ph2.png
+    - lib/features/assets/ph3.png
+    - lib/features/assets/ph4.png
+
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

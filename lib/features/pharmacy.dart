@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'med_search.dart';
 
 class PharmacyPage extends StatelessWidget {
   const PharmacyPage({Key? key}) : super(key: key);
@@ -38,7 +37,7 @@ class PharmacyPage extends StatelessWidget {
                     size: 20,
                     color: Colors.black,
                   ),
-                  SizedBox(width: 5),
+                  const SizedBox(width: 5),
                   Text(
                     'Manila, Philippines',
                     style: TextStyle(
@@ -89,7 +88,7 @@ class PharmacyPage extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(width: 10),
-                  // Cart icon in the right side of the search bar with border
+                  // Cart icon on the right side of the search bar with border
                   Container(
                     decoration: BoxDecoration(
                       color: Colors.grey[300],
@@ -120,7 +119,6 @@ class PharmacyPage extends StatelessWidget {
                 ),
               ),
             ),
-
             
             // Grid of buttons
             GridView.builder(
@@ -132,20 +130,62 @@ class PharmacyPage extends StatelessWidget {
               ),
               itemCount: 6,
               itemBuilder: (context, index) {
-                return Container(
-                  decoration: BoxDecoration(
-                    color: Colors.grey[300],
-                    borderRadius: BorderRadius.circular(15.0),
-                  ),
-                  child: Center(
-                    child: Text(
-                      'Button $index',
-                      style: const TextStyle(
-                        fontFamily: 'Poppins',
-                        fontWeight: FontWeight.w600,
-                        fontSize: 16,
-                        color: Colors.black,
+                return InkWell(
+                  onTap: () {
+                    // Handle button tap
+                  },
+                  child: ClipRect(
+                    child: Container(
+                      decoration: BoxDecoration(
+                        color: Colors.grey[300],
+                        borderRadius: BorderRadius.circular(15.0),
                       ),
+                      child: index == 0
+                          ? Image.asset(
+                              'lib/features/assets/ph1.png',
+                              fit: BoxFit.cover,
+                            )
+                          : index == 1
+                              ? Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Image.asset(
+                                      'lib/features/assets/ph2.png',
+                                      width: 80,
+                                      height: 80,
+                                      fit: BoxFit.cover,
+                                    ),
+                                    const SizedBox(height: 8),
+                                    Text(
+                                      'Button $index',
+                                      style: const TextStyle(
+                                        fontFamily: 'Poppins',
+                                        fontWeight: FontWeight.w600,
+                                        fontSize: 16,
+                                        color: Colors.black,
+                                      ),
+                                    ),
+                                  ],
+                                )
+                              : index == 2
+                                  ? Image.asset(
+                                      'lib/features/assets/ph3.png',
+                                      fit: BoxFit.cover,
+                                    )
+                                  : index == 3
+                                      ? Image.asset(
+                                          'lib/features/assets/ph4.png',
+                                          fit: BoxFit.cover,
+                                        )
+                                      : index == 4
+                                          ? Image.asset(
+                                              'lib/features/assets/ph2.png',
+                                              fit: BoxFit.cover,
+                                            )
+                                          : Image.asset(
+                                              'lib/features/assets/ph1.png',
+                                              fit: BoxFit.cover,
+                                            ),
                     ),
                   ),
                 );

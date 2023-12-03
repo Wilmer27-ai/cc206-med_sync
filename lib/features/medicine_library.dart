@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:url_launcher/url_launcher.dart';
 
 class MedicineLibrary extends StatelessWidget {
   const MedicineLibrary({Key? key}) : super(key: key);
@@ -69,12 +69,12 @@ class MedicineLibrary extends StatelessWidget {
               mainAxisSpacing: 8.0,
               crossAxisSpacing: 8.0,
               children: [
-                _buildGridButton('lib/features/assets/1.png'),
-                _buildGridButton('lib/features/assets/2.png'),
-                _buildGridButton('lib/features/assets/3.png'),
-                _buildGridButton('lib/features/assets/4.png'),
-                _buildGridButton('lib/features/assets/5.png'),
-                _buildGridButton('lib/features/assets/6.png'),
+                _buildGridButton('lib/features/assets/1.png','https://neurolrespract.biomedcentral.com/articles'),
+                _buildGridButton('lib/features/assets/2.png','https://www.mayoclinic.org/diseases-conditions/heart-disease/symptoms-causes/syc-20353118#:~:text=Heart%20diseases%20include%3A,Disease%20of%20the%20heart%20muscle'),
+                _buildGridButton('lib/features/assets/3.png','https://www.niddk.nih.gov/health-information/digestive-diseases'),
+                _buildGridButton('lib/features/assets/4.png','https://www.webmd.com/lung/lung-diseases-overview'),
+                _buildGridButton('lib/features/assets/5.png','https://www.niddk.nih.gov/health-information/urologic-diseases'),
+                _buildGridButton('lib/features/assets/6.png','https://www.cdc.gov/reproductivehealth/womensrh/healthconcerns.html'),
               ],
             ),
           ],
@@ -84,22 +84,28 @@ class MedicineLibrary extends StatelessWidget {
   }
 }
 
-Widget _buildGridButton( String imagePath){
-return Container(
-  margin: const EdgeInsets.all(8.0),
-  decoration: BoxDecoration(
-    borderRadius: BorderRadius.circular(20.0),
-    color: const Color.fromARGB(230, 232, 230, 230)
-  ),
-  child: ClipRRect( 
-    borderRadius:  BorderRadius.circular(20.0),
-    child: Image.asset( 
-        imagePath,
-        height: 60,
-        width: 60,
-        fit: BoxFit.cover,
+Widget _buildGridButton( String imagePath, String link ){
+  return InkWell(
+    onTap:() {
+      launch(link);
+    },
+    child: Container(
+      margin: const EdgeInsets.all(8.0),
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(20.0),
+        color: const Color.fromARGB(230, 232, 230, 230),
+      ),
+      child: ClipRRect(
+        borderRadius: BorderRadius.circular(20.0),
+        child: Image.asset(
+          imagePath,
+           height: 60,
+          width: 60,
+          fit: BoxFit.cover,
         ),
-  ),
-);
+      ),
+    ),
+  );
 }
+
 

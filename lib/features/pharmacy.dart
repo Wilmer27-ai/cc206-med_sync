@@ -5,13 +5,13 @@ class PharmacyPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
       body: SingleChildScrollView(
-        padding: const EdgeInsets.all(8.0),
+        padding: EdgeInsets.all(8.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            const Padding(
+            Padding(
               padding: EdgeInsets.only(top: 30),
               child: Text(
                 'Online Pharmacy',
@@ -23,14 +23,14 @@ class PharmacyPage extends StatelessWidget {
                 ),
               ),
             ),
-            const SizedBox(height: 20),
+            SizedBox(height: 20),
             // Location Icon
             Icon(
               Icons.location_on,
               size: 100,
               color: Color.fromARGB(255, 25, 23, 149),
             ),
-            const SizedBox(height: 10),
+            SizedBox(height: 10),
             Text(
               'Manila, Philippines',
               style: TextStyle(

@@ -52,7 +52,7 @@ class med_search extends StatelessWidget {
 
 Widget _buildGridButton(BuildContext context, String imagePath, double buttonHeight, double buttonWidth, int index) {
   return InkWell(
-    onTap: index == 3 
+    onTap: index == 4 
     ? () {
       Navigator.push(
         context,

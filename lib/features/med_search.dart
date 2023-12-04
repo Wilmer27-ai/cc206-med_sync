@@ -29,7 +29,7 @@ class med_search extends StatelessWidget {
         ),
       ),
       body: SingleChildScrollView(
-        padding: const EdgeInsets.all(40.0),
+        padding: const EdgeInsets.all(1.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
@@ -106,9 +106,9 @@ class FloatingNavigator extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.only(top: 10.0),
+      margin: const EdgeInsets.only(top: 40.0),
       width: containerWidth,
-      padding: const EdgeInsets.symmetric(vertical: 5.0),
+      padding: const EdgeInsets.symmetric(vertical: 2.0),
       decoration: BoxDecoration(
         color: const Color.fromARGB(255, 10, 5, 118),
         borderRadius: BorderRadius.circular(20.0),

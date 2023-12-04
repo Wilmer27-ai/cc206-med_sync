@@ -16,41 +16,46 @@ class PharmacyPage extends StatelessWidget {
             Navigator.pop(context);
           },
         ),
-        title: const Center(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              Text(
-                'Online Pharmacy',
-                style: TextStyle(
-                  fontFamily: 'Poppins',
-                  fontWeight: FontWeight.w800,
-                  fontSize: 30,
-                  color: Color.fromARGB(255, 25, 23, 149),
-                ),
-              ),
-              Row(
+        flexibleSpace: const Column(
+          children: [
+            SizedBox(height: 30), // Add padding to the top
+            Center(
+              child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Icon(
-                    Icons.location_on,
-                    size: 20,
-                    color: Colors.black,
-                  ),
-                  SizedBox(width: 5),
                   Text(
-                    'Manila, Philippines',
+                    'Online Pharmacy',
                     style: TextStyle(
                       fontFamily: 'Poppins',
-                      fontWeight: FontWeight.bold,
-                      fontSize: 15,
-                      color: Colors.black,  
+                      fontWeight: FontWeight.w800,
+                      fontSize: 30,
+                      color: Color.fromARGB(255, 25, 23, 149),
                     ),
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Icon(
+                        Icons.location_on,
+                        size: 20,
+                        color: Colors.black,
+                      ),
+                      SizedBox(width: 5),
+                      Text(
+                        'Manila, Philippines',
+                        style: TextStyle(
+                          fontFamily: 'Poppins',
+                          fontWeight: FontWeight.bold,
+                          fontSize: 15,
+                          color: Colors.black,
+                        ),
+                      ),
+                    ],
                   ),
                 ],
               ),
-            ],
-          ),
+            ),
+          ],
         ),
         actions: const [
           // Remove the cart icon from the title page

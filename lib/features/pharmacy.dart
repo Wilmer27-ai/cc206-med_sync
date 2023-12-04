@@ -106,7 +106,7 @@ class PharmacyPage extends StatelessWidget {
                 ],
               ),
             ),
-            // All Products text
+
             const Padding(
               padding: EdgeInsets.symmetric(vertical: 10),
               child: Text(
@@ -120,7 +120,7 @@ class PharmacyPage extends StatelessWidget {
               ),
             ),
             
-            // Grid of buttons
+
             GridView.builder(
               shrinkWrap: true,
               gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
@@ -132,7 +132,7 @@ class PharmacyPage extends StatelessWidget {
               itemBuilder: (context, index) {
                 return InkWell(
                   onTap: () {
-                    // Handle button tap
+
                   },
                   child: ClipRect(
                     child: Container(
@@ -174,8 +174,6 @@ class PharmacyPage extends StatelessWidget {
                 );
               },
             ),
-            
-            // Your other widgets here...
           ],
         ),
       ),

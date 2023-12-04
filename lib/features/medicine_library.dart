@@ -4,26 +4,34 @@ import 'package:url_launcher/url_launcher.dart';
 class MedicineLibrary extends StatelessWidget {
   const MedicineLibrary({Key? key}) : super(key: key);
 
-    @override
+     @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        leading: IconButton(
+          icon: const Icon(
+            Icons.arrow_back,
+            color: Colors.black,
+          ),
+          onPressed: () {
+            Navigator.pop(context);
+          },
+        ),
+        title: const Text(
+          'Medicine Library',
+          style: TextStyle(
+            fontFamily: 'Poppins',
+            fontWeight: FontWeight.w800,
+            fontSize: 40,
+            color: Color.fromARGB(255, 25, 23, 149),
+          ),
+        ),
+      ),
       body: SingleChildScrollView(
         padding: const EdgeInsets.all(8.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            const Padding(
-              padding: EdgeInsets.only(top: 30),
-              child: Text(
-                'Medicine Library',
-                style: TextStyle(
-                  fontFamily: 'Poppins',
-                  fontWeight: FontWeight.w800,
-                  fontSize: 40,
-                  color: Color.fromARGB(255, 25, 23, 149),
-                ),
-              ),
-            ),
             const SizedBox(height: 20),
             //SEARCH
              Row(

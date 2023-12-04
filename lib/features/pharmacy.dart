@@ -37,7 +37,7 @@ class PharmacyPage extends StatelessWidget {
                     size: 20,
                     color: Colors.black,
                   ),
-                  const SizedBox(width: 5),
+                  SizedBox(width: 5),
                   Text(
                     'Manila, Philippines',
                     style: TextStyle(

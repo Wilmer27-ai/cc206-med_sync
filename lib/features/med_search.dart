@@ -9,23 +9,27 @@ class med_search extends StatelessWidget {
   const med_search({Key? key}) : super(key: key);
 
   // This widget is the root of your application.
- @override
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Center(
-          child: Text('What are you looking for?',
-          style: TextStyle(
-            fontFamily: 'Poppins',
-            fontWeight: FontWeight.bold,
-            fontSize: 33,
-            color: Color.fromARGB(255, 25, 23, 149),
-           ),
+        title: const Padding(
+          padding: EdgeInsets.only(top: 20.0), // Adjust top padding here
+          child: Center(
+            child: Text(
+              'What are you looking for?',
+              style: TextStyle(
+                fontFamily: 'Poppins',
+                fontWeight: FontWeight.bold,
+                fontSize: 33,
+                color: Color.fromARGB(255, 25, 23, 149),
+              ),
+            ),
           ),
         ),
       ),
       body: SingleChildScrollView(
-        padding: const EdgeInsets.all(8.0),
+        padding: const EdgeInsets.all(40.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
@@ -43,7 +47,8 @@ class med_search extends StatelessWidget {
                 _buildGridButton(context,'lib/features/assets/medlib.png', 100, 100, 4),
                 _buildGridButton(context,'lib/features/assets/aboutUs.png', 100, 100, 5),
               ],
-            )
+            ),
+            const FloatingNavigator(),
           ],
         ),
       ),
@@ -52,6 +57,23 @@ class med_search extends StatelessWidget {
 }
 
 Widget _buildGridButton(BuildContext context, String imagePath, double buttonHeight, double buttonWidth, int index) {
+  final container = Container(
+    margin: const EdgeInsets.all(15.0),
+    decoration: BoxDecoration(
+      borderRadius: BorderRadius.circular(20.0),
+      color: const Color.fromARGB(230, 232, 230, 230),
+    ),
+    child: ClipRRect(
+      borderRadius: BorderRadius.circular(20.0),
+      child: Image.asset(
+        imagePath,
+        height: buttonHeight,
+        width: buttonWidth,
+        fit: BoxFit.cover,
+      ),
+    ),
+  );
+
   return InkWell(
     onTap: () {
       if (index == 3) {
@@ -68,24 +90,58 @@ Widget _buildGridButton(BuildContext context, String imagePath, double buttonHei
         );
       }
     },
-    
-    child: Container(
-      margin: const EdgeInsets.all(8.0),
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(20.0),
-        color: const Color.fromARGB(230, 232, 230, 230),
-      ),
-      child: ClipRRect(
-        borderRadius: BorderRadius.circular(20.0),
-        child: Image.asset(
-          imagePath,
-          height: buttonHeight,
-          width: buttonWidth,
-          fit: BoxFit.cover,
-        ),
-      ),
-    ),
+    child: container,
   );
 }
-
  
+class FloatingNavigator extends StatelessWidget {
+  final double iconSize;
+  final Color iconColor;
+  final double containerWidth;
+
+  const FloatingNavigator(
+      {Key? key, this.iconSize = 35.0, this.iconColor = Colors.white, this.containerWidth = 300.0})
+      : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      margin: const EdgeInsets.only(top: 10.0),
+      width: containerWidth,
+      padding: const EdgeInsets.symmetric(vertical: 5.0),
+      decoration: BoxDecoration(
+        color: const Color.fromARGB(255, 10, 5, 118),
+        borderRadius: BorderRadius.circular(20.0),
+      ),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
+        children: [
+          IconButton(
+            icon: Icon(Icons.home, size: iconSize, color: iconColor),
+            onPressed: () {
+              // Handle home button press
+            },
+          ),
+          IconButton(
+            icon: Icon(Icons.search, size: iconSize, color: iconColor),
+            onPressed: () {
+              // Handle search button press
+            },
+          ),
+          IconButton(
+            icon: Icon(Icons.message, size: iconSize, color: iconColor),
+            onPressed: () {
+              // Handle message button press
+            },
+          ),
+          IconButton(
+            icon: Icon(Icons.person, size: iconSize, color: iconColor),
+            onPressed: () {
+              // Handle profile button press
+            },
+          ),
+        ],
+      ),
+    );
+  }
+}

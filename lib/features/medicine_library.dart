@@ -107,8 +107,8 @@ Widget _buildGridButton( String imagePath, String link ){
         borderRadius: BorderRadius.circular(20.0),
         child: Image.asset(
           imagePath,
-           height: 60,
-          width: 60,
+           height: 40,
+          width: 40,
           fit: BoxFit.cover,
         ),
       ),

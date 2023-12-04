@@ -36,12 +36,12 @@ class med_search extends StatelessWidget {
               mainAxisSpacing: 8.0,
               crossAxisSpacing: 8.0,
               children: [ 
-                _buildGridButton(context,'assets/images/medicine_library.png', 100, 100, 0),
-                _buildGridButton(context,'assets/images/medicine_library.png', 100, 100, 1),
-                _buildGridButton(context,'assets/images/medicine_library.png', 100, 100, 2),
-                _buildGridButton(context,'assets/images/medicine_library.png', 100, 100, 3),
-                _buildGridButton(context,'assets/images/medicine_library.png', 100, 100, 4),
-                _buildGridButton(context,'assets/images/medicine_library.png', 100, 100, 5),
+                _buildGridButton(context,'lib/features/assets/symptoms.png', 100, 100, 0),
+                _buildGridButton(context,'lib/features/assets/finddoc.png', 100, 100, 1),
+                _buildGridButton(context,'lib/features/assets/findhos.png', 100, 100, 2),
+                _buildGridButton(context,'lib/features/assets/onlinepha.png', 100, 100, 3),
+                _buildGridButton(context,'lib/features/assets/medlib.png', 100, 100, 4),
+                _buildGridButton(context,'lib/features/assets/aboutUs.png', 100, 100, 5),
               ],
             )
           ],

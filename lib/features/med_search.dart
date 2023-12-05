@@ -45,7 +45,7 @@ class med_search extends StatelessWidget {
                 _buildGridButton(context,'lib/features/assets/findhos.png', 100, 100, 2),
                 _buildGridButton(context,'lib/features/assets/onlinepha.png', 100, 100, 3),
                 _buildGridButton(context,'lib/features/assets/medlib.png', 100, 100, 4),
-                _buildGridButton(context,'lib/features/assets/aboutUs.png', 100, 100, 5),
+                _buildGridButton(context,'lib/features/assets/aboutUs (1).png', 100, 100, 5),
               ],
             ),
             const FloatingNavigator(),
